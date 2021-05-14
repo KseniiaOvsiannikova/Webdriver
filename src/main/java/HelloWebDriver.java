@@ -3,22 +3,21 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class HelloWebDriver {
+    public class HelloWebDriver {
 
-    public static void main(String[] args) throws InterruptedException {
-        WebDriver driver = new ChromeDriver();
-        driver.get("http://google.com");
-        Thread.sleep(2000);
-        driver.quit();
+        public static void main(String[] args)  {
 
-        driver = new EdgeDriver();
-        driver.get("http://google.com");
-        Thread.sleep(2000);
-        driver.quit();
+            WebDriver driver = new ChromeDriver();
+            driver.get("http://google.com");
+            driver.quit();
 
-        driver = new FirefoxDriver();
-        driver.get("http://google.com");
-        Thread.sleep(2000);
-        driver.quit();
+            System.setProperty("webdriver.edge.driver", "C:\\Webdriver\\msedgedriver.exe");
+            driver = new EdgeDriver();
+            driver.get("http://google.com");
+            driver.quit();
+
+            driver = new FirefoxDriver();
+            driver.get("http://google.com");
+            driver.quit();
+        }
     }
-}
