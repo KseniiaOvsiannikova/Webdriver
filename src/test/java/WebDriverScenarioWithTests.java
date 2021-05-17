@@ -82,20 +82,22 @@ public class WebDriverScenarioWithTests {
         logger.info("6. Get Page Title name and Title length -> Print Page Title and Title length on the Console via logger.");
         String titleOfClickedEnglishWikipediaLink = driver.getTitle();
         int titleLength = titleOfClickedEnglishWikipediaLink.length();
-        logger.info(String.format("The title of clicked link is ", titleOfClickedEnglishWikipediaLink, ".\n Title length is ", titleLength, " symbols."));
+        logger.info(String.format("The title of clicked link is %s", titleOfClickedEnglishWikipediaLink));
+        logger.info(String.format("Title length, symbols, is: %s", titleLength));
 
         logger.info("7. Get Page URL and verify if the it is a correct page opened.");
         String clickedURL = driver.getCurrentUrl();
 
-        Assert.assertTrue(clickedURL.contains("wikipedia"), "The opened link do not content expected text.");
+        Assert.assertTrue(clickedURL.contains("wikipedia"), "The opened link do not contain expected text.");
 
         logger.info("8. Print Page Length on Console via logger.");
         String clickedPageLength = driver.getPageSource();
-        logger.info(String.format("The clicked page length is ", clickedPageLength.length(), " symbols."));
+        logger.info(String.format("The clicked page length, symbols: %s", clickedPageLength.length()));
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         int screenHeight = screenSize.height;
         int screenWidth = screenSize.width;
-        logger.info(String.format("Screenshot height is ", screenHeight, "\n Screenshot width is ", screenWidth));
+        logger.info(String.format("Screenshot height is %s", screenHeight));
+        logger.info(String.format("Screenshot width is %s", screenWidth));
 
         logger.info("9. Take Screenshot of the first Image  in the “Did you know...” container.");
         wait.until(pageLoadCondition);
@@ -115,7 +117,7 @@ public class WebDriverScenarioWithTests {
         WebElement wikipediaSearchResult = driver.findElement(By.xpath("//h1[@id='firstHeading']"));
         logger.info(String.format("Wikipedia Search Result is %s", wikipediaSearchResult));
         String contentOfWikipediaSearchResult = wikipediaSearchResult.getText();
-        logger.info(String.format("Wikipedia Search Result is ", contentOfWikipediaSearchResult));
+        logger.info(String.format("Wikipedia Search Result is %s", contentOfWikipediaSearchResult));
 
         Assert.assertFalse(contentOfWikipediaSearchResult.contains("Test Automation"), "The search result do not content expected text.");
     }
