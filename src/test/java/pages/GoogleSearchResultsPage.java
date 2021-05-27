@@ -12,7 +12,9 @@ public class GoogleSearchResultsPage extends AbstractPage {
     @FindAll({@FindBy(xpath = "//cite[contains(text(), 'wikipedia')]")})
     private List<WebElement> generalSearchResults;
 
-    @Override
+    @FindBy(xpath = "//div[@id='rso']/div[2]//cite")
+    private WebElement firstEnglishWikipediaLink;
+
     protected AbstractPage openPage() {
         return null;
     }
@@ -27,14 +29,13 @@ public class GoogleSearchResultsPage extends AbstractPage {
     }
 
     public WikipediaPage openFirstEnglishWikipediaLink() {
+        waitForPageLoad(driver);
         return new WikipediaPage(driver);
     }
 
-//    public GoogleSearchResultsPage openPage() {
-//        return this;
-//    }
-
-//    public GoogleSearchResultsPage openFirstEnglishWikipediaLink() {
-//        return this;
-//    }
 }
+//    public WikipediaPage openFirstEnglishWikipediaLink() {
+//        firstEnglishWikipediaLink.click();
+//        waitForPageLoad(driver);
+//        return this;
+//    }
