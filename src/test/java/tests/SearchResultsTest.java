@@ -1,3 +1,5 @@
+package tests;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.GoogleHomePage;
@@ -5,7 +7,7 @@ import pages.GoogleHomePage;
 public class SearchResultsTest extends BaseClass {
 
     @Test
-    public void commonFlow() {
+    public void searchResultsNumberIsPositive() {
 
         int expectedSearchResultsNumber = new GoogleHomePage(driver)
                 .openPage()

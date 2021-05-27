@@ -12,6 +12,11 @@ public class GoogleSearchResultsPage extends AbstractPage {
     @FindAll({@FindBy(xpath = "//cite[contains(text(), 'wikipedia')]")})
     private List<WebElement> generalSearchResults;
 
+    @Override
+    protected AbstractPage openPage() {
+        return null;
+    }
+
     public GoogleSearchResultsPage(WebDriver driver) {
         super(driver);
     }
@@ -21,7 +26,15 @@ public class GoogleSearchResultsPage extends AbstractPage {
         return generalSearchResults.size();
     }
 
-    public GoogleSearchResultsPage openPage() {
-        return this;
+    public WikipediaPage openFirstEnglishWikipediaLink() {
+        return new WikipediaPage(driver);
     }
+
+//    public GoogleSearchResultsPage openPage() {
+//        return this;
+//    }
+
+//    public GoogleSearchResultsPage openFirstEnglishWikipediaLink() {
+//        return this;
+//    }
 }
