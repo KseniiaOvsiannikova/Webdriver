@@ -1,6 +1,5 @@
 package pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -17,17 +16,18 @@ public class GoogleHomePage extends AbstractPage {
     @FindBy(xpath = "//input[@name='btnK']")
     private WebElement searchButton;
 
-    public GoogleHomePage(WebDriver driver) {super(driver);}
+    public GoogleHomePage(WebDriver driver) {
+        super(driver);
+    }
 
     public GoogleHomePage openPage() {
         driver.get(HOMEPAGE_URL);
-        WebDriverWait wait = new WebDriverWait(driver, 20);
         driver.manage().window().maximize();
         waitForPageLoad(driver);
         return this;
     }
 
-    public GoogleSearchResultsPage searchForText () {
+    public GoogleSearchResultsPage searchForText() {
         searchInput.sendKeys("wikipedia");
         new WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeClickable(searchButton)).click();
         return new GoogleSearchResultsPage(driver);

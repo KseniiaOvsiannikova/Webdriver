@@ -1,16 +1,17 @@
-package pages;
-
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 
-public abstract class AbstractPage {
-    protected static final long WAIT_TIMEOUT_SECONDS = 50;
+import java.util.logging.Logger;
+
+public class BaseClass {
     protected WebDriver driver;
-
-    protected abstract AbstractPage openPage();
+    protected int WAIT_TIMEOUT_SECONDS;
+    Logger logger = Logger.getGlobal();
 
     protected void waitForPageLoad(WebDriver driver) {
 
@@ -23,8 +24,15 @@ public abstract class AbstractPage {
         wait.until(pageLoadCondition);
     }
 
-    protected AbstractPage(WebDriver driver) {
-        this.driver = driver;
-        PageFactory.initElements(driver, this);
+    @BeforeMethod(alwaysRun = true)
+    public void browsersSetup() {
+        System.setProperty("webdriver.chrome.driver", "src\\test\\resources\\webdrivers\\chromedriver.exe");
+        driver = new ChromeDriver();
+    }
+
+    @AfterMethod(alwaysRun = true)
+    public void browserTearDown() {
+        driver.quit();
+        driver = null;
     }
 }
