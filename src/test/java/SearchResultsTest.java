@@ -9,7 +9,7 @@ import java.util.logging.Logger;
 
 public class SearchResultsTest {
 
-    private WebDriver driver;
+    protected WebDriver driver;
     Logger logger = Logger.getGlobal();
 
     @BeforeMethod(alwaysRun = true)
