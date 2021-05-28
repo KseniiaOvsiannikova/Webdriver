@@ -1,8 +1,6 @@
 package tests;
 
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.GoogleHomePage;
 
@@ -10,10 +8,12 @@ public class WikipediaLinkTest extends BaseClass {
 
     @Test
     public void firstEnglishWikipediaLinkContains() {
+
+        logger.info("Test 'firstEnglishWikipediaLinkContains' started.");
+
         String contentOfFirstEnglishWikipediaLink = new GoogleHomePage(driver)
                 .openPage()
                 .searchForText()
-                .openFirstEnglishWikipediaLink()
                 .contentOfFirstEnglishWikipediaLink();
 
         logger.info(String.format("The link clicked is %s", contentOfFirstEnglishWikipediaLink));

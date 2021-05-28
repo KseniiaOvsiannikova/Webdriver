@@ -9,11 +9,9 @@ import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
 
 import javax.imageio.ImageIO;
 import java.io.File;
+import java.io.IOException;
 
 public class WikipediaPage extends AbstractPage {
-
-    @FindBy(xpath = "//div[@id='rso']/div[2]//cite")
-    private WebElement firstEnglishWikipediaLink;
 
     @FindBy(xpath = "//div[@id='mp-dyk']//img")
     private WebElement didYouKnowImage;
@@ -26,22 +24,15 @@ public class WikipediaPage extends AbstractPage {
         super(driver);
     }
 
-    public String contentOfFirstEnglishWikipediaLink() {
+    public boolean makeScreenshot (WebElement element) throws IOException {
         waitForPageLoad(driver);
-        return firstEnglishWikipediaLink.getText();
-    }
-
-    public Screenshot makeScreenshot (WebElement element) {
-        return new AShot().shootingStrategy(ShootingStrategies.viewportPasting(1000)).takeScreenshot(driver, element);
+       Screenshot screenshot = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(1000)).takeScreenshot(driver, element);
+        return ImageIO.write(screenshot.getImage(), "jpg", new File("target\\DidYouKnow.jpg"));
     }
 
     public WebElement getDidYouKnowImage() {
         return didYouKnowImage;
     }
 
-//    public File savedScreenshot(){
-//        return new ImageIO.write(makeScreenshot.getImage(), "jpg", new File("target\\DidYouKnow.jpg"));
-//    }
 }
-
 

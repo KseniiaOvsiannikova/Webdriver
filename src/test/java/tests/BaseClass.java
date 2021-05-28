@@ -7,9 +7,9 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterMethod;
-
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
 import java.util.concurrent.TimeUnit;
@@ -33,7 +33,7 @@ public class BaseClass {
 
     @BeforeTest(alwaysRun = true)
     @Parameters("browser")
-    public void browsersSetup(String browser) throws Exception {
+    public void browsersSetup(@Optional("chrome") String browser) throws Exception {
 
         if (browser.equalsIgnoreCase("firefox")) {
             System.setProperty("webdriver.gecko.driver", "src\\test\\resources\\webdrivers\\geckodriver.exe");
@@ -54,7 +54,7 @@ public class BaseClass {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
-    @AfterMethod(alwaysRun = true)
+    @AfterClass(alwaysRun = true)
     public void browserTearDown() {
         driver.quit();
         driver = null;

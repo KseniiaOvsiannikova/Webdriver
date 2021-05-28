@@ -23,6 +23,11 @@ public class GoogleSearchResultsPage extends AbstractPage {
         super(driver);
     }
 
+    public String contentOfFirstEnglishWikipediaLink() {
+        waitForPageLoad(driver);
+        return firstEnglishWikipediaLink.getText();
+    }
+
     public int countSearchResults() {
         waitForPageLoad(driver);
         return generalSearchResults.size();
