@@ -30,6 +30,7 @@ public class GoogleSearchResultsPage extends AbstractPage {
 
     public WikipediaPage openFirstEnglishWikipediaLink() {
         waitForPageLoad(driver);
+        firstEnglishWikipediaLink.click();
         return new WikipediaPage(driver);
     }
 

@@ -2,12 +2,15 @@ package tests;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.testng.log4testng.Logger;
 import pages.GoogleHomePage;
 
 public class SearchResultsTest extends BaseClass {
 
     @Test
     public void searchResultsNumberIsPositive() {
+
+        logger.info("Test 'searchResultsNumberIsPositive' started.");
 
         int expectedSearchResultsNumber = new GoogleHomePage(driver)
                 .openPage()

@@ -8,6 +8,10 @@
         <classes>
             <class name="tests.SearchResultsTest">
             </class>
+            <class name="tests.WikipediaLinkTest">
+            </class>
+            <class name="tests.WikipediaImageTest">
+            </class>
         </classes>
     </test>
     <test name="FirefoxTest">
@@ -15,12 +19,20 @@
         <classes>
             <class name="tests.SearchResultsTest">
             </class>
+            <class name="tests.WikipediaLinkTest">
+            </class>
+            <class name="tests.WikipediaImageTest">
+            </class>
         </classes>
     </test>
     <test name="EdgeTest">
         <parameter name="browser" value="Edge" />
         <classes>
             <class name="tests.SearchResultsTest">
+            </class>
+            <class name="tests.WikipediaLinkTest">
+            </class>
+            <class name="tests.WikipediaImageTest">
             </class>
         </classes>
     </test>

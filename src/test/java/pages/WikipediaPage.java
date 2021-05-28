@@ -39,9 +39,9 @@ public class WikipediaPage extends AbstractPage {
         return didYouKnowImage;
     }
 
-    public File savedScreenshot(){
-        return new ImageIO.write(makeScreenshot.getImage(), "jpg", new File("target\\DidYouKnow.jpg"));
-    }
+//    public File savedScreenshot(){
+//        return new ImageIO.write(makeScreenshot.getImage(), "jpg", new File("target\\DidYouKnow.jpg"));
+//    }
 }
 
 
