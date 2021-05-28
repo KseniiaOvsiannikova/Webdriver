@@ -34,8 +34,3 @@ public class GoogleSearchResultsPage extends AbstractPage {
     }
 
 }
-//    public WikipediaPage openFirstEnglishWikipediaLink() {
-//        firstEnglishWikipediaLink.click();
-//        waitForPageLoad(driver);
-//        return this;
-//    }
