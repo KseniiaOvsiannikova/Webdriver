@@ -4,7 +4,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
-
 import java.util.List;
 
 public class GoogleSearchResultsPage extends AbstractPage {
@@ -16,7 +15,7 @@ public class GoogleSearchResultsPage extends AbstractPage {
     private WebElement firstEnglishWikipediaLink;
 
     protected AbstractPage openPage() {
-        return null;
+        return this;
     }
 
     public GoogleSearchResultsPage(WebDriver driver) {
@@ -25,6 +24,7 @@ public class GoogleSearchResultsPage extends AbstractPage {
 
     public String contentOfFirstEnglishWikipediaLink() {
         waitForPageLoad(driver);
+
         return firstEnglishWikipediaLink.getText();
     }
 
@@ -36,7 +36,7 @@ public class GoogleSearchResultsPage extends AbstractPage {
     public WikipediaPage openFirstEnglishWikipediaLink() {
         waitForPageLoad(driver);
         firstEnglishWikipediaLink.click();
+
         return new WikipediaPage(driver);
     }
-
 }

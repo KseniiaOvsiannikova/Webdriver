@@ -13,7 +13,7 @@ public class WikipediaImageTest extends BaseClass {
     @Test
     public void screenshotExistsBySpecifiedPath() throws IOException {
 
-    logger.info("Test 'screenshotExistsBySpecifiedPath' started.");
+        logger.info("Test 'screenshotExistsBySpecifiedPath' started.");
 
         boolean screenshot = new GoogleHomePage(driver)
                 .openPage()

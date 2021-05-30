@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class GoogleHomePage extends AbstractPage {
 
-    private static final String HOMEPAGE_URL = "https://google.com";
+    private static final String GOOGLE_URL = "https://google.com";
 
     @FindBy(name = "q")
     private WebElement searchInput;
@@ -21,16 +21,18 @@ public class GoogleHomePage extends AbstractPage {
     }
 
     public GoogleHomePage openPage() {
-        driver.get(HOMEPAGE_URL);
+        driver.get(GOOGLE_URL);
         driver.manage().window().maximize();
         waitForPageLoad(driver);
+
         return this;
     }
 
     public GoogleSearchResultsPage searchForText() {
-        searchInput.sendKeys("wikipedia");
-        new WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeClickable(searchButton)).click();
+        String searchValue = "wikipedia";
+        searchInput.sendKeys(searchValue);
+        new WebDriverWait(driver, WAIT_TIMEOUT_SECONDS).until(ExpectedConditions.elementToBeClickable(searchButton)).click();
+
         return new GoogleSearchResultsPage(driver);
     }
-
 }

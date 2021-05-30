@@ -6,7 +6,6 @@ import org.openqa.selenium.support.FindBy;
 import ru.yandex.qatools.ashot.AShot;
 import ru.yandex.qatools.ashot.Screenshot;
 import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
-
 import javax.imageio.ImageIO;
 import java.io.File;
 import java.io.IOException;
@@ -17,22 +16,22 @@ public class WikipediaPage extends AbstractPage {
     private WebElement didYouKnowImage;
 
     protected AbstractPage openPage() {
-        return null;
+        return this;
     }
 
     public WikipediaPage(WebDriver driver) {
         super(driver);
     }
 
-    public boolean makeScreenshot (WebElement element) throws IOException {
+    public boolean makeScreenshot(WebElement element) throws IOException {
         waitForPageLoad(driver);
-       Screenshot screenshot = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(1000)).takeScreenshot(driver, element);
+        Screenshot screenshot = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(1000)).takeScreenshot(driver, element);
+
         return ImageIO.write(screenshot.getImage(), "jpg", new File("target\\DidYouKnow.jpg"));
     }
 
     public WebElement getDidYouKnowImage() {
         return didYouKnowImage;
     }
-
 }
 
