@@ -6,21 +6,28 @@ import org.openqa.selenium.support.FindBy;
 import ru.yandex.qatools.ashot.AShot;
 import ru.yandex.qatools.ashot.Screenshot;
 import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
+
 import javax.imageio.ImageIO;
 import java.io.File;
 import java.io.IOException;
 
 public class WikipediaPage extends AbstractPage {
 
-    @FindBy(xpath = "//div[@id='mp-dyk']//img")
-    private WebElement didYouKnowImage;
-
-    protected AbstractPage openPage() {
-        return this;
-    }
+    private static final String WIKIPEDIA_URL = "https://en.wikipedia.org";
 
     public WikipediaPage(WebDriver driver) {
         super(driver);
+    }
+
+    @FindBy(xpath = "//div[@id='mp-dyk']//img")
+    private WebElement didYouKnowImage;
+
+    public WikipediaPage openPage() {
+        driver.get(WIKIPEDIA_URL);
+        driver.manage().window().maximize();
+        waitForPageLoad(driver);
+
+        return this;
     }
 
     public boolean makeScreenshot(WebElement element) throws IOException {

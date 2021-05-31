@@ -7,7 +7,7 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public abstract class AbstractPage {
-    protected static final long WAIT_TIMEOUT_SECONDS = 50;
+    public static final long WAIT_TIMEOUT_SECONDS = 50;
     protected WebDriver driver;
 
     protected AbstractPage(WebDriver driver) {
@@ -17,7 +17,7 @@ public abstract class AbstractPage {
 
     protected abstract AbstractPage openPage();
 
-    protected void waitForPageLoad(WebDriver driver) {
+    public void waitForPageLoad(WebDriver driver) {
 
         ExpectedCondition<Boolean> pageLoadCondition = new ExpectedCondition<Boolean>() {
             public Boolean apply(WebDriver driver) {

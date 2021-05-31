@@ -12,6 +12,8 @@
             </class>
             <class name="tests.WikipediaImageTest">
             </class>
+            <class name="tests.StackoverflowSearchResultsTest">
+            </class>
         </classes>
     </test>
     <test name="FirefoxTest">
@@ -23,6 +25,8 @@
             </class>
             <class name="tests.WikipediaImageTest">
             </class>
+            <class name="tests.StackoverflowSearchResultsTest">
+            </class>
         </classes>
     </test>
     <test name="EdgeTest">
@@ -33,6 +37,8 @@
             <class name="tests.WikipediaLinkTest">
             </class>
             <class name="tests.WikipediaImageTest">
+            </class>
+            <class name="tests.StackoverflowSearchResultsTest">
             </class>
         </classes>
     </test>

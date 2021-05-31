@@ -13,7 +13,7 @@ import java.util.logging.Logger;
 
 public class BaseClass {
     protected WebDriver driver;
-    protected int WAIT_TIMEOUT_SECONDS;
+    //protected int WAIT_TIMEOUT_SECONDS;
     Logger logger = Logger.getGlobal();
 
     @BeforeMethod(alwaysRun = true)

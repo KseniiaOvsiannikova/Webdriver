@@ -2,7 +2,6 @@ package tests;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.GoogleHomePage;
 import pages.WikipediaPage;
 
 import java.io.File;
@@ -15,10 +14,8 @@ public class WikipediaImageTest extends BaseClass {
 
         logger.info("Test 'screenshotExistsBySpecifiedPath' started.");
 
-        boolean screenshot = new GoogleHomePage(driver)
+        boolean screenshot = new WikipediaPage(driver)
                 .openPage()
-                .searchForText()
-                .openFirstEnglishWikipediaLink()
                 .makeScreenshot(new WikipediaPage(driver).getDidYouKnowImage());
 
         Assert.assertTrue(new File("target\\DidYouKnow.jpg")
