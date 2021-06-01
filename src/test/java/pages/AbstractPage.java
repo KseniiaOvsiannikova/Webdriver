@@ -2,8 +2,10 @@ package pages;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public abstract class AbstractPage {
@@ -19,7 +21,7 @@ public abstract class AbstractPage {
 
     protected void waitForPageLoad(WebDriver driver) {
 
-        ExpectedCondition<Boolean> pageLoadCondition = new ExpectedCondition<Boolean>() {
+        ExpectedCondition<Boolean> pageLoadCondition = new ExpectedCondition<>() {
             public Boolean apply(WebDriver driver) {
                 return ((JavascriptExecutor) driver).executeScript("return document.readyState").equals("complete");
             }
@@ -27,4 +29,12 @@ public abstract class AbstractPage {
         WebDriverWait wait = new WebDriverWait(driver, WAIT_TIMEOUT_SECONDS);
         wait.until(pageLoadCondition);
     }
+
+    protected boolean elementIsPresent(WebElement element) {
+        new WebDriverWait(driver, WAIT_TIMEOUT_SECONDS).until(ExpectedConditions
+                .visibilityOf(element));
+
+        return element.isEnabled();
+    }
 }
+

@@ -12,7 +12,7 @@ public class TutorialspointPage extends AbstractPage {
     @FindBy(id = "gsc-i-id1")
     private WebElement searchInputArea;
 
-    @FindBy(xpath = "//div[contains (text(), 'results')]")
+    @FindBy(xpath = ".//div[contains(@id, 'resInfo')]")
     private WebElement searchResults;
 
     public TutorialspointPage(WebDriver driver) {
@@ -37,9 +37,10 @@ public class TutorialspointPage extends AbstractPage {
 
     public int countTutorialspointSearchResults() {
         waitForPageLoad(driver);
+        elementIsPresent(searchResults);
         String searchResultsText = searchResults.getText();
 
-        return Integer.parseInt(searchResultsText.replaceAll("[\\D]", ""));
+        return Integer.parseInt(searchResultsText.replaceAll("[\\D]", "")) / 1000;
     }
 
 }
