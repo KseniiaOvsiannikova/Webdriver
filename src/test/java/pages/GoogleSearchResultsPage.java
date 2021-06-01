@@ -15,12 +15,12 @@ public class GoogleSearchResultsPage extends AbstractPage {
     @FindBy(xpath = "//div[@id='rso']/div[2]//cite")
     private WebElement firstEnglishWikipediaLink;
 
-    protected AbstractPage openPage() {
-        return this;
-    }
-
     public GoogleSearchResultsPage(WebDriver driver) {
         super(driver);
+    }
+
+    protected GoogleSearchResultsPage openPage() {
+        return this;
     }
 
     public String contentOfFirstEnglishWikipediaLink() {
@@ -31,6 +31,7 @@ public class GoogleSearchResultsPage extends AbstractPage {
 
     public int countSearchResults() {
         waitForPageLoad(driver);
+
         return generalSearchResults.size();
     }
 

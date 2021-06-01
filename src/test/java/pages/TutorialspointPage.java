@@ -38,6 +38,7 @@ public class TutorialspointPage extends AbstractPage {
     public int countTutorialspointSearchResults() {
         waitForPageLoad(driver);
         String searchResultsText = searchResults.getText();
+
         return Integer.parseInt(searchResultsText.replaceAll("[\\D]", ""));
     }
 

@@ -15,12 +15,12 @@ public class WikipediaPage extends AbstractPage {
 
     private static final String WIKIPEDIA_URL = "https://en.wikipedia.org";
 
+    @FindBy(xpath = "//div[@id='mp-dyk']//img")
+    private WebElement didYouKnowImage;
+
     public WikipediaPage(WebDriver driver) {
         super(driver);
     }
-
-    @FindBy(xpath = "//div[@id='mp-dyk']//img")
-    private WebElement didYouKnowImage;
 
     public WikipediaPage openPage() {
         driver.get(WIKIPEDIA_URL);
@@ -30,7 +30,7 @@ public class WikipediaPage extends AbstractPage {
         return this;
     }
 
-    public boolean makeScreenshot(WebElement element) throws IOException {
+    public boolean makeAndSaveScreenshot(WebElement element) throws IOException {
         waitForPageLoad(driver);
         Screenshot screenshot = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(1000)).takeScreenshot(driver, element);
 

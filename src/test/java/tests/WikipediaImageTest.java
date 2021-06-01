@@ -16,7 +16,7 @@ public class WikipediaImageTest extends BaseClass {
 
         boolean screenshot = new WikipediaPage(driver)
                 .openPage()
-                .makeScreenshot(new WikipediaPage(driver).getDidYouKnowImage());
+                .makeAndSaveScreenshot(new WikipediaPage(driver).getDidYouKnowImage());
 
         Assert.assertTrue(new File("target\\DidYouKnow.jpg")
                 .exists(), "Screenshot not found by specified path.");
