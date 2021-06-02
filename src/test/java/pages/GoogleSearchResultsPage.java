@@ -34,5 +34,4 @@ public class GoogleSearchResultsPage extends AbstractPage {
 
         return generalSearchResults.size();
     }
-
 }

@@ -3,8 +3,6 @@ package pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class GoogleHomePage extends AbstractPage {
 
@@ -31,7 +29,8 @@ public class GoogleHomePage extends AbstractPage {
     public GoogleSearchResultsPage searchForText() {
         String searchValue = "wikipedia";
         searchInput.sendKeys(searchValue);
-        new WebDriverWait(driver, WAIT_TIMEOUT_SECONDS).until(ExpectedConditions.elementToBeClickable(searchButton)).click();
+        waitForElementIsPresent(searchButton);
+        searchButton.click();
 
         return new GoogleSearchResultsPage(driver);
     }

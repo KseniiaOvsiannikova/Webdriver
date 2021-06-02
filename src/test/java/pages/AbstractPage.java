@@ -30,7 +30,7 @@ public abstract class AbstractPage {
         wait.until(pageLoadCondition);
     }
 
-    protected boolean elementIsPresent(WebElement element) {
+    protected boolean waitForElementIsPresent(WebElement element) {
         new WebDriverWait(driver, WAIT_TIMEOUT_SECONDS).until(ExpectedConditions
                 .visibilityOf(element));
 
