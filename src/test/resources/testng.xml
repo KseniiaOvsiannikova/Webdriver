@@ -6,11 +6,11 @@
     <test name="ChromeTest">
         <parameter name="browser" value="Chrome" />
         <classes>
-            <class name="tests.SearchResultsTest">
+            <class name="tests.GoogleSearchResultsTest">
             </class>
-            <class name="tests.WikipediaLinkTest">
+            <class name="tests.wikipedia.WikipediaLinkTest">
             </class>
-            <class name="tests.WikipediaImageTest">
+            <class name="tests.wikipedia.WikipediaImageTest">
             </class>
             <class name="tests.TutorialspointSearchResultsTest">
             </class>
@@ -19,11 +19,11 @@
     <test name="FirefoxTest">
         <parameter name="browser" value="Firefox" />
         <classes>
-            <class name="tests.SearchResultsTest">
+            <class name="tests.GoogleSearchResultsTest">
             </class>
-            <class name="tests.WikipediaLinkTest">
+            <class name="tests.wikipedia.WikipediaLinkTest">
             </class>
-            <class name="tests.WikipediaImageTest">
+            <class name="tests.wikipedia.WikipediaImageTest">
             </class>
             <class name="tests.TutorialspointSearchResultsTest">
             </class>
@@ -32,11 +32,11 @@
     <test name="EdgeTest">
         <parameter name="browser" value="Edge" />
         <classes>
-            <class name="tests.SearchResultsTest">
+            <class name="tests.GoogleSearchResultsTest">
             </class>
-            <class name="tests.WikipediaLinkTest">
+            <class name="tests.wikipedia.WikipediaLinkTest">
             </class>
-            <class name="tests.WikipediaImageTest">
+            <class name="tests.wikipedia.WikipediaImageTest">
             </class>
             <class name="tests.TutorialspointSearchResultsTest">
             </class>
