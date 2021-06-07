@@ -8,12 +8,14 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
+import org.testng.asserts.SoftAssert;
 
 import java.util.logging.Logger;
 
 public class BaseClass {
     protected WebDriver driver;
     Logger logger = Logger.getGlobal();
+    SoftAssert softAssert = new SoftAssert();
 
     @BeforeMethod(alwaysRun = true)
     @Parameters("browser")

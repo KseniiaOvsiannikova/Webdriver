@@ -14,6 +14,12 @@
             </class>
             <class name="tests.TutorialspointSearchResultsTest">
             </class>
+            <class name="tests.JqueryDroppableTest">
+            </class>
+            <class name="tests.JqueryDroppableTextChangeTest">
+            </class>
+            <class name="tests.NavigationTest">
+            </class>
         </classes>
     </test>
     <test name="FirefoxTest">
