@@ -1,9 +1,9 @@
-package tests;
+package tests.jquery;
 
-import org.openqa.selenium.Point;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.JqueryuiDroppablePage;
+import tests.BaseClass;
 
 public class JqueryDroppableTextChangeTest extends BaseClass {
     @Test

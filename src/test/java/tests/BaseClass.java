@@ -14,7 +14,7 @@ import java.util.logging.Logger;
 
 public class BaseClass {
     protected WebDriver driver;
-    Logger logger = Logger.getGlobal();
+    protected Logger logger = Logger.getGlobal();
     SoftAssert softAssert = new SoftAssert();
 
     @BeforeMethod(alwaysRun = true)

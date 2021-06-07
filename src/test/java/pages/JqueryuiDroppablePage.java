@@ -2,7 +2,6 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -11,9 +10,6 @@ import org.openqa.selenium.support.FindBy;
 public class JqueryuiDroppablePage extends AbstractPage {
 
     private static final String JQUERY_URL = "https://jqueryui.com/droppable/";
-
-//    @FindBy(xpath = "//iframe[@class='demo-frame']")
-//    private WebElement droppableFrame;
 
     @FindBy(id = "draggable")
     private WebElement draggableElement;
@@ -41,15 +37,8 @@ public class JqueryuiDroppablePage extends AbstractPage {
         return new JqueryuiDroppablePage(driver);
     }
 
-    public Point getPositionInTheFrame() {
-        waitForPageLoad(driver);
-
-        return draggableElement.getLocation();
-    }
-    public Point getTargetPosition() {
-        waitForElementIsPresent(dropHere);
-
-        return dropHere.getLocation();
+    public String getAttributeHighlight() {
+        return dropHere.getAttribute("class");
     }
 
     public String getActualTargetText() {

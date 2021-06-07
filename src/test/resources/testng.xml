@@ -6,17 +6,17 @@
     <test name="ChromeTest">
         <parameter name="browser" value="Chrome" />
         <classes>
-            <class name="tests.SearchResultsTest">
+            <class name="tests.GoogleSearchResultsTest">
             </class>
-            <class name="tests.WikipediaLinkTest">
+            <class name="tests.wikipedia.WikipediaLinkTest">
             </class>
-            <class name="tests.WikipediaImageTest">
+            <class name="tests.wikipedia.WikipediaImageTest">
             </class>
             <class name="tests.TutorialspointSearchResultsTest">
             </class>
-            <class name="tests.JqueryDroppableTest">
+            <class name="tests.jquery.JqueryDroppableTest">
             </class>
-            <class name="tests.JqueryDroppableTextChangeTest">
+            <class name="tests.jquery.JqueryDroppableTextChangeTest">
             </class>
             <class name="tests.NavigationTest">
             </class>
@@ -25,26 +25,38 @@
     <test name="FirefoxTest">
         <parameter name="browser" value="Firefox" />
         <classes>
-            <class name="tests.SearchResultsTest">
+            <class name="tests.GoogleSearchResultsTest">
             </class>
-            <class name="tests.WikipediaLinkTest">
+            <class name="tests.wikipedia.WikipediaLinkTest">
             </class>
-            <class name="tests.WikipediaImageTest">
+            <class name="tests.wikipedia.WikipediaImageTest">
             </class>
             <class name="tests.TutorialspointSearchResultsTest">
+            </class>
+            <class name="tests.jquery.JqueryDroppableTest">
+            </class>
+            <class name="tests.jquery.JqueryDroppableTextChangeTest">
+            </class>
+            <class name="tests.NavigationTest">
             </class>
         </classes>
     </test>
     <test name="EdgeTest">
         <parameter name="browser" value="Edge" />
         <classes>
-            <class name="tests.SearchResultsTest">
+            <class name="tests.GoogleSearchResultsTest">
             </class>
-            <class name="tests.WikipediaLinkTest">
+            <class name="tests.wikipedia.WikipediaLinkTest">
             </class>
-            <class name="tests.WikipediaImageTest">
+            <class name="tests.wikipedia.WikipediaImageTest">
             </class>
             <class name="tests.TutorialspointSearchResultsTest">
+            </class>
+            <class name="tests.jquery.JqueryDroppableTest">
+            </class>
+            <class name="tests.jquery.JqueryDroppableTextChangeTest">
+            </class>
+            <class name="tests.NavigationTest">
             </class>
         </classes>
     </test>

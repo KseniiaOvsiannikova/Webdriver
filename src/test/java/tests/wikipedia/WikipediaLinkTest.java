@@ -1,8 +1,9 @@
-package tests;
+package tests.wikipedia;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.GoogleHomePage;
+import pages.google.GoogleHomePage;
+import tests.BaseClass;
 
 public class WikipediaLinkTest extends BaseClass {
 

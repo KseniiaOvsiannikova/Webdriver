@@ -2,9 +2,9 @@ package tests;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.GoogleHomePage;
+import pages.google.GoogleHomePage;
 
-public class SearchResultsTest extends BaseClass {
+public class GoogleSearchResultsTest extends BaseClass {
 
     @Test
     public void searchResultsNumberIsPositive() {
