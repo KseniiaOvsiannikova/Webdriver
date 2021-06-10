@@ -20,8 +20,6 @@ public class TutorialspointPage extends AbstractPage {
     }
 
     public TutorialspointPage openPage() {
-        driver.get(TUTORIALSPOINT_URL);
-        driver.manage().window().maximize();
         waitForPageLoad(driver);
 
         return this;

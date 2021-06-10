@@ -19,6 +19,10 @@ public abstract class AbstractPage {
 
     protected abstract AbstractPage openPage();
 
+    public String getPageTitle() {
+        return driver.getTitle();
+    }
+
     protected void waitForPageLoad(WebDriver driver) {
 
         ExpectedCondition<Boolean> pageLoadCondition = new ExpectedCondition<>() {
