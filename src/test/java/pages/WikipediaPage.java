@@ -24,7 +24,7 @@ public class WikipediaPage extends AbstractPage {
 
     public WikipediaPage openPage() {
         driver.get(WIKIPEDIA_URL);
-        driver.manage().window().maximize();
+        //driver.manage().window().maximize();
         waitForPageLoad(driver);
 
         return this;

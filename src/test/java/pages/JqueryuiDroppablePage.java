@@ -23,7 +23,7 @@ public class JqueryuiDroppablePage extends AbstractPage {
 
     public JqueryuiDroppablePage openPage() {
         driver.get(JQUERY_URL);
-        driver.manage().window().maximize();
+        //driver.manage().window().maximize();
         waitForPageLoad(driver);
 
         return this;

@@ -21,7 +21,7 @@ public class GoogleHomePage extends AbstractPage {
 
     public GoogleHomePage openPage() {
         driver.get(GOOGLE_URL);
-        driver.manage().window().maximize();
+        //driver.manage().window().maximize();
         waitForPageLoad(driver);
 
         return this;

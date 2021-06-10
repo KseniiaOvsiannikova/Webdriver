@@ -1,6 +1,10 @@
 package tests;
 
 import org.testng.annotations.Test;
+import pages.JqueryuiDroppablePage;
+import pages.TutorialspointPage;
+import pages.WikipediaPage;
+import pages.google.GoogleHomePage;
 
 public class NavigationTest extends BaseClass {
 
@@ -9,31 +13,27 @@ public class NavigationTest extends BaseClass {
 
         logger.info("Test 'navigationAndVerifyTest' started.");
 
-        driver.navigate().to("https://google.com");
-        String actualGoogleTitle = driver.getTitle();
-        Boolean verifyGoogleTitle = actualGoogleTitle.equalsIgnoreCase("Google");
-        softAssert.assertNotNull(verifyGoogleTitle);
+        String actualGoogleTitle = new GoogleHomePage(driver)
+                .openPage()
+                .getPageTitle();
         logger.info(String.format("Actual title of Google Page is %s", actualGoogleTitle));
         softAssert.assertEquals(actualGoogleTitle, "Google", "Title is unexpected.");
 
-        driver.navigate().to("https://en.wikipedia.org");
-        String actualWikipediaTitle = driver.getTitle();
-        Boolean verifyWikipediaTitle = actualWikipediaTitle.equalsIgnoreCase("Wikipedia");
-        softAssert.assertNotNull(verifyWikipediaTitle);
+        String actualWikipediaTitle = new WikipediaPage(driver)
+                .openPage()
+                .getPageTitle();
         logger.info(String.format("Actual title of Wikipedia Page is %s", actualWikipediaTitle));
         softAssert.assertEquals(actualWikipediaTitle, "Wikipedia, the free encyclopedia", "Title is unexpected.");
 
-        driver.navigate().to("https://www.tutorialspoint.com/");
-        String actualTutorialspointTitle = driver.getTitle();
-        Boolean verifyTutorianspointTitle = actualTutorialspointTitle.equalsIgnoreCase("Tutorialspoint");
-        softAssert.assertNotNull(verifyTutorianspointTitle);
+        String actualTutorialspointTitle = new TutorialspointPage(driver)
+                .openPage()
+                .getPageTitle();
         logger.info(String.format("Actual title of Tutorialspoint Page is %s", actualTutorialspointTitle));
         softAssert.assertTrue(actualTutorialspointTitle.contains("Tutorialspoint"), "Tutorialspoint Page title does not contain the URL title text.");
 
-        driver.navigate().to("https://jqueryui.com/droppable/");
-        String actualJqueryTitle = driver.getTitle();
-        Boolean verifyJqueryTitle = actualJqueryTitle.equalsIgnoreCase("Jquery");
-        softAssert.assertNotNull(verifyJqueryTitle);
+        String actualJqueryTitle = new JqueryuiDroppablePage(driver)
+                .openPage()
+                .getPageTitle();
         logger.info(String.format("Actual title of Jquery Page is %s", actualJqueryTitle));
         softAssert.assertTrue(actualJqueryTitle.toLowerCase().contains("Jquery".toLowerCase()), "Jquery Page title does not contain the URL title text.");
 

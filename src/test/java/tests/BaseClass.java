@@ -33,6 +33,7 @@ public class BaseClass {
         } else {
             throw new Exception("Browser is not correct");
         }
+        driver.manage().window().maximize();
     }
 
     @AfterMethod(alwaysRun = true)

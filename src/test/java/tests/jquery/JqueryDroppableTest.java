@@ -12,7 +12,7 @@ public class JqueryDroppableTest extends BaseClass {
 
         logger.info("Test 'dragAndDropElementToTarget' started.");
 
-        var attributeClassName = new JqueryuiDroppablePage(driver)
+        String attributeClassName = new JqueryuiDroppablePage(driver)
                 .openPage()
                 .dragAndDropToTarget()
                 .highlightTheDraggedElement()
