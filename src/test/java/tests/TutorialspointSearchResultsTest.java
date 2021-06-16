@@ -4,7 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.TutorialspointPage;
 
-public class TutorialspointSearchResultsTest extends BaseClass {
+public class TutorialspointSearchResultsTest extends BaseTest {
 
     @Test
     public void searchResultsNumberIsGraterThanHundred() {

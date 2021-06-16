@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class SeleniumGridTest extends BaseClass {
+public class SeleniumGridTest extends BaseTest {
 
     @Test
     public void seleniumRemoteTest() throws MalformedURLException {

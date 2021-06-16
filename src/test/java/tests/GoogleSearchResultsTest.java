@@ -4,7 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.google.GoogleHomePage;
 
-public class GoogleSearchResultsTest extends BaseClass {
+public class GoogleSearchResultsTest extends BaseTest {
 
     @Test
     public void searchResultsNumberIsPositive() {

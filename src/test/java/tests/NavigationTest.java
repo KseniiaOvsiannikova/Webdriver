@@ -6,7 +6,7 @@ import pages.TutorialspointPage;
 import pages.WikipediaPage;
 import pages.google.GoogleHomePage;
 
-public class NavigationTest extends BaseClass {
+public class NavigationTest extends BaseTest {
 
     @Test
     public void navigationAndVerifyTest() {

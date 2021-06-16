@@ -3,9 +3,9 @@ package tests.jquery;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.JqueryuiDroppablePage;
-import tests.BaseClass;
+import tests.BaseTest;
 
-public class JqueryDroppableTextChangeTest extends BaseClass {
+public class JqueryDroppableTextChangeTest extends BaseTest {
     @Test
     public void verifyTextAfterDragAndDrop() {
 
