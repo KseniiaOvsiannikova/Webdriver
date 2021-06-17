@@ -37,25 +37,6 @@ public class DriverManager {
         return driver;
     }
 
-//    public static WebDriver getDriver throws Exception {
-//
-//        if (browser.equalsIgnoreCase("firefox")) {
-//            WebDriverManager.firefoxdriver().setup();
-//            driver = new FirefoxDriver();
-//        } else if (browser.equalsIgnoreCase("chrome")) {
-//            WebDriverManager.chromedriver().setup();
-//            driver = new ChromeDriver();
-//        } else if (browser.equalsIgnoreCase("Edge")) {
-//            WebDriverManager.edgedriver().setup();
-//            driver = new EdgeDriver();
-//        } else {
-//            throw new Exception("Browser is not correct");
-//        }
-//        driver.manage().window().maximize();
-//
-//        return driver;
-//    }
-
     public static void closeDriver(){
         driver.quit();
         driver = null;

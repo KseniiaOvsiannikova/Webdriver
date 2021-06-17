@@ -21,7 +21,8 @@ public class BaseTest {
 
     @BeforeMethod(alwaysRun = true)
     @Parameters("browser")
-    public void browsersSetup(@Optional("chrome") String browser) {
+    public void browsersSetup(@Optional("chrome") String browser)
+    {
         driver = DriverManager.getDriver();
     }
 
