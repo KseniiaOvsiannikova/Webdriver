@@ -25,11 +25,7 @@ public abstract class AbstractPage {
 
     protected void waitForPageLoad(WebDriver driver) {
 
-        ExpectedCondition<Boolean> pageLoadCondition = new ExpectedCondition<>() {
-            public Boolean apply(WebDriver driver) {
-                return ((JavascriptExecutor) driver).executeScript("return document.readyState").equals("complete");
-            }
-        };
+        ExpectedCondition<Boolean> pageLoadCondition = (ExpectedCondition) driver1 -> ((JavascriptExecutor) driver1).executeScript("return document.readyState").equals("complete");
         WebDriverWait wait = new WebDriverWait(driver, WAIT_TIMEOUT_SECONDS);
         wait.until(pageLoadCondition);
     }
