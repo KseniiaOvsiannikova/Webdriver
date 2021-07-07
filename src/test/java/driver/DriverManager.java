@@ -10,11 +10,12 @@ public class DriverManager {
 
     private static WebDriver driver;
 
-    private DriverManager(){}
+    private DriverManager() {
+    }
 
-    public static WebDriver getDriver(){
-        if (null == driver){
-            switch (System.getProperty("browser")){
+    public static WebDriver getDriver() {
+        if (null == driver) {
+            switch (System.getProperty("browser")) {
                 case "chrome": {
                     WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver();
@@ -36,7 +37,7 @@ public class DriverManager {
         return driver;
     }
 
-    public static void closeDriver(){
+    public static void closeDriver() {
         driver.quit();
         driver = null;
     }

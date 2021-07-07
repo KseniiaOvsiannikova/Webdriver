@@ -15,7 +15,6 @@ public class WikipediaImageTest extends BaseTest {
 
         logger.info("Test 'screenshotExistsBySpecifiedPath' started.");
 
-        //String WIKIPEDIA_URL = URLCreator.fromProperty();
         boolean screenshot = new WikipediaPage(driver)
                 .openPage()
                 .makeAndSaveScreenshot(new WikipediaPage(driver).getDidYouKnowImage());

@@ -11,15 +11,15 @@ public class Link {
         return GOOGLE_URL;
     }
 
-    public void setGOOGLE_URL (String GOOGLE_URL) {
+    public void setGOOGLE_URL(String GOOGLE_URL) {
         this.GOOGLE_URL = GOOGLE_URL;
-        }
+    }
 
     public String getWIKIPEDIA_URL() {
         return WIKIPEDIA_URL;
     }
 
-    public void setWIKIPEDIA_URL (String WIKIPEDIA_URL) {
+    public void setWIKIPEDIA_URL(String WIKIPEDIA_URL) {
         this.WIKIPEDIA_URL = WIKIPEDIA_URL;
     }
 
