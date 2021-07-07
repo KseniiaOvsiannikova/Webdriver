@@ -1,5 +1,6 @@
 .git/
 .idea/
 target/
+allure-results/
 *.iml
 
