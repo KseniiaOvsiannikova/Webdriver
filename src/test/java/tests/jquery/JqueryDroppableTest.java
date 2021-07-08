@@ -3,9 +3,9 @@ package tests.jquery;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.JqueryuiDroppablePage;
-import tests.BaseClass;
+import tests.BaseTest;
 
-public class JqueryDroppableTest extends BaseClass {
+public class JqueryDroppableTest extends BaseTest {
 
     @Test
     public void dragAndDropElementToTarget() {

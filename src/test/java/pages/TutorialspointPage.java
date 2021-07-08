@@ -5,11 +5,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import static service.URLCreator.fromPropertyTUTORIALSPOINT_URL;
+
 public class TutorialspointPage extends AbstractPage {
 
-    private static final String TUTORIALSPOINT_URL = "https://www.tutorialspoint.com/";
-
-    @FindBy(id = "gsc-i-id1")
+    @FindBy(xpath = ".//input[contains(@id, 'gsc-i-id1')]")
     private WebElement searchInputArea;
 
     @FindBy(xpath = ".//div[contains(@id, 'resInfo')]")
@@ -20,6 +20,7 @@ public class TutorialspointPage extends AbstractPage {
     }
 
     public TutorialspointPage openPage() {
+        driver.get(fromPropertyTUTORIALSPOINT_URL());
         waitForPageLoad(driver);
 
         return this;
@@ -27,7 +28,7 @@ public class TutorialspointPage extends AbstractPage {
 
     public TutorialspointPage searchForPhrase() {
         String searchValue = "submit() vs click()";
-        waitForPageLoad(driver);
+        waitForElementIsPresent(searchInputArea);
         searchInputArea.sendKeys(searchValue, Keys.ENTER);
 
         return new TutorialspointPage(driver);

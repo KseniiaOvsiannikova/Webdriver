@@ -11,9 +11,9 @@ import javax.imageio.ImageIO;
 import java.io.File;
 import java.io.IOException;
 
-public class WikipediaPage extends AbstractPage {
+import static service.URLCreator.fromPropertyWIKIPEDIA_URL;
 
-    private static final String WIKIPEDIA_URL = "https://en.wikipedia.org";
+public class WikipediaPage extends AbstractPage {
 
     @FindBy(xpath = "//div[@id='mp-dyk']//img")
     private WebElement didYouKnowImage;
@@ -23,7 +23,7 @@ public class WikipediaPage extends AbstractPage {
     }
 
     public WikipediaPage openPage() {
-        driver.get(WIKIPEDIA_URL);
+        driver.get(fromPropertyWIKIPEDIA_URL());
         waitForPageLoad(driver);
 
         return this;

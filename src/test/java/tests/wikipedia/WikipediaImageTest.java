@@ -3,12 +3,12 @@ package tests.wikipedia;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.WikipediaPage;
-import tests.BaseClass;
+import tests.BaseTest;
 
 import java.io.File;
 import java.io.IOException;
 
-public class WikipediaImageTest extends BaseClass {
+public class WikipediaImageTest extends BaseTest {
 
     @Test
     public void screenshotExistsBySpecifiedPath() throws IOException {

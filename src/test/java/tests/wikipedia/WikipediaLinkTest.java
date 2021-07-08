@@ -3,9 +3,9 @@ package tests.wikipedia;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.google.GoogleHomePage;
-import tests.BaseClass;
+import tests.BaseTest;
 
-public class WikipediaLinkTest extends BaseClass {
+public class WikipediaLinkTest extends BaseTest {
 
     @Test
     public void firstEnglishWikipediaLinkContains() {
