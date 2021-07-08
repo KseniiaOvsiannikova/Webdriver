@@ -1,20 +1,24 @@
 package service;
 
 public class URLCreator {
+    private static final String GOOGLE_URL = "testdata.google.url";
+    private static final String WIKIPEDIA_URL = "testdata.wikipedia.url";
+    private static final String JQUERYUI_URL = "testdata.jqueryui.url";
+    private static final String TUTORIALSPOINT_URL = "testdata.tutorialspoint.url";
 
     public static String fromPropertyGOOGLE_URL() {
-        return TestDataReader.getTestData("testdata.google.url");
+        return TestDataReader.getTestData(GOOGLE_URL);
     }
 
     public static String fromPropertyWIKIPEDIA_URL() {
-        return TestDataReader.getTestData("testdata.wikipedia.url");
+        return TestDataReader.getTestData(WIKIPEDIA_URL);
     }
 
     public static String fromPropertyJQUERY_URL() {
-        return TestDataReader.getTestData("testdata.jqueryui.url");
+        return TestDataReader.getTestData(JQUERYUI_URL);
     }
 
     public static String fromPropertyTUTORIALSPOINT_URL() {
-        return TestDataReader.getTestData("testdata.tutorialspoint.url");
+        return TestDataReader.getTestData(TUTORIALSPOINT_URL);
     }
 }
