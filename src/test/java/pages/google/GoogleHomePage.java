@@ -5,9 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import pages.AbstractPage;
 
-public class GoogleHomePage extends AbstractPage {
+import static service.URLCreator.fromPropertyGOOGLE_URL;
 
-    private static final String GOOGLE_URL = "https://google.com";
+public class GoogleHomePage extends AbstractPage {
 
     @FindBy(name = "q")
     private WebElement searchInput;
@@ -20,7 +20,7 @@ public class GoogleHomePage extends AbstractPage {
     }
 
     public GoogleHomePage openPage() {
-        driver.get(GOOGLE_URL);
+        driver.get(fromPropertyGOOGLE_URL());
         waitForPageLoad(driver);
 
         return this;

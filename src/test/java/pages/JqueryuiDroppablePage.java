@@ -7,9 +7,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
-public class JqueryuiDroppablePage extends AbstractPage {
+import static service.URLCreator.fromPropertyJQUERY_URL;
 
-    private static final String JQUERY_URL = "https://jqueryui.com/droppable/";
+public class JqueryuiDroppablePage extends AbstractPage {
 
     @FindBy(id = "draggable")
     private WebElement draggableElement;
@@ -22,7 +22,7 @@ public class JqueryuiDroppablePage extends AbstractPage {
     }
 
     public JqueryuiDroppablePage openPage() {
-        driver.get(JQUERY_URL);
+        driver.get(fromPropertyJQUERY_URL());
         waitForPageLoad(driver);
 
         return this;

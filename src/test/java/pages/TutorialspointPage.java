@@ -5,11 +5,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import java.net.URL;
+import static service.URLCreator.fromPropertyTUTORIALSPOINT_URL;
 
 public class TutorialspointPage extends AbstractPage {
-
-    private static final String TUTORIALSPOINT_URL = "http://www.tutorialspoint.com/";
 
     @FindBy(xpath = ".//input[contains(@id, 'gsc-i-id1')]")
     private WebElement searchInputArea;
@@ -22,7 +20,7 @@ public class TutorialspointPage extends AbstractPage {
     }
 
     public TutorialspointPage openPage() {
-        driver.get(TUTORIALSPOINT_URL);
+        driver.get(fromPropertyTUTORIALSPOINT_URL());
         waitForPageLoad(driver);
 
         return this;
