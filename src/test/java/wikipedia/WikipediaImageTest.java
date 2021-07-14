@@ -1,9 +1,10 @@
-package tests.wikipedia;
+package wikipedia;
 
+import baseTest.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.WikipediaPage;
-import tests.BaseTest;
+
 
 import java.io.File;
 import java.io.IOException;

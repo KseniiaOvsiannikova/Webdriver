@@ -1,5 +1,4 @@
-package tests;
-
+import baseTest.BaseTest;
 import org.testng.annotations.Test;
 import pages.JqueryuiDroppablePage;
 import pages.TutorialspointPage;
