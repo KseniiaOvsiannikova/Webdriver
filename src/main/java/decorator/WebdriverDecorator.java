@@ -10,64 +10,63 @@ import org.testng.Reporter;
 
 public class WebdriverDecorator implements WebDriver{
 
-    protected WebDriver driver;
+    protected WebDriver decoratedDriver;
 
     public WebdriverDecorator (WebDriver driver) {
-        this.driver = driver;
+        this.decoratedDriver = driver;
     }
 
     public void get(String url) {
-        driver.get(url);
+        decoratedDriver.get(url);
     }
 
     public String getCurrentUrl() {
-        return driver.getCurrentUrl();
+        return decoratedDriver.getCurrentUrl();
     }
 
     public String getTitle() {
-        return driver.getTitle();
+        return decoratedDriver.getTitle();
     }
 
     public List<WebElement> findElements(By by) {
-        return driver.findElements(by);
+        return decoratedDriver.findElements(by);
     }
 
     public WebElement findElement(By by) {
-        Reporter.log(String.format("Finding element: %s, current URL: '%s'", by.toString(), driver.getCurrentUrl()),
+        Reporter.log(String.format("Finding element: %s, current URL: '%s'", by.toString(), decoratedDriver.getCurrentUrl()),
                 true);
-        return driver.findElement(by);
+        return decoratedDriver.findElement(by);
     }
 
     public String getPageSource() {
-        return driver.getPageSource();
+        return decoratedDriver.getPageSource();
     }
 
     public void close() {
-        driver.close();
+        decoratedDriver.close();
     }
 
     public void quit() {
-        System.out.println("Browser will be closed now...");
-        driver.quit();
+        decoratedDriver.quit();
     }
 
     public Set<String> getWindowHandles() {
-        return driver.getWindowHandles();
+        return decoratedDriver.getWindowHandles();
     }
 
     public String getWindowHandle() {
-        return driver.getWindowHandle();
+        return decoratedDriver.getWindowHandle();
     }
 
     public TargetLocator switchTo() {
-        return driver.switchTo();
+        return decoratedDriver.switchTo();
     }
 
     public Navigation navigate() {
-        return driver.navigate();
+        return decoratedDriver.navigate();
     }
 
     public Options manage() {
-        return driver.manage();
+        return decoratedDriver.manage();
     }
 }

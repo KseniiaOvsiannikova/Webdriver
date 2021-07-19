@@ -8,7 +8,6 @@ import static service.URLCreator.fromPropertyGOOGLE_URL;
 
 public class WebdriverDecoratorGoogleTest extends BaseTest {
 
-
     @Test
     public void webdriverDecoratorTest() {
 
