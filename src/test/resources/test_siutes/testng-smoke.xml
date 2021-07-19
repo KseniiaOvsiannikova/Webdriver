@@ -6,7 +6,7 @@
     <test name="ChromeTest">
         <parameter name="browser" value="Chrome"/>
         <classes>
-            <class name="tests.NavigationTest">
+            <class name="NavigationTest">
             </class>
         </classes>
     </test>

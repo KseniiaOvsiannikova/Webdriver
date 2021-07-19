@@ -6,57 +6,57 @@
     <test name="ChromeTest">
         <parameter name="browser" value="Chrome"/>
         <classes>
-            <class name="tests.GoogleSearchResultsTest">
+            <class name="GoogleSearchResultsTest">
             </class>
-            <class name="tests.wikipedia.WikipediaLinkTest">
+            <class name="wikipedia.WikipediaLinkTest">
             </class>
-            <class name="tests.wikipedia.WikipediaImageTest">
+            <class name="wikipedia.WikipediaImageTest">
             </class>
-            <class name="tests.TutorialspointSearchResultsTest">
+            <class name="TutorialspointSearchResultsTest">
             </class>
-            <class name="tests.jquery.JqueryDroppableTest">
+            <class name="jquery.JqueryDroppableTest">
             </class>
-            <class name="tests.jquery.JqueryDroppableTextChangeTest">
+            <class name="jquery.JqueryDroppableTextChangeTest">
             </class>
-            <class name="tests.NavigationTest">
+            <class name="NavigationTest">
             </class>
         </classes>
     </test>
     <test name="FirefoxTest">
         <parameter name="browser" value="Firefox"/>
         <classes>
-            <class name="tests.GoogleSearchResultsTest">
+            <class name="GoogleSearchResultsTest">
             </class>
-            <class name="tests.wikipedia.WikipediaLinkTest">
+            <class name="wikipedia.WikipediaLinkTest">
             </class>
-            <class name="tests.wikipedia.WikipediaImageTest">
+            <class name="wikipedia.WikipediaImageTest">
             </class>
-            <class name="tests.TutorialspointSearchResultsTest">
+            <class name="TutorialspointSearchResultsTest">
             </class>
-            <class name="tests.jquery.JqueryDroppableTest">
+            <class name="jquery.JqueryDroppableTest">
             </class>
-            <class name="tests.jquery.JqueryDroppableTextChangeTest">
+            <class name="jquery.JqueryDroppableTextChangeTest">
             </class>
-            <class name="tests.NavigationTest">
+            <class name="NavigationTest">
             </class>
         </classes>
     </test>
     <test name="EdgeTest">
         <parameter name="browser" value="Edge"/>
         <classes>
-            <class name="tests.GoogleSearchResultsTest">
+            <class name="GoogleSearchResultsTest">
             </class>
-            <class name="tests.wikipedia.WikipediaLinkTest">
+            <class name="wikipedia.WikipediaLinkTest">
             </class>
-            <class name="tests.wikipedia.WikipediaImageTest">
+            <class name="wikipedia.WikipediaImageTest">
             </class>
-            <class name="tests.TutorialspointSearchResultsTest">
+            <class name="TutorialspointSearchResultsTest">
             </class>
-            <class name="tests.jquery.JqueryDroppableTest">
+            <class name="jquery.JqueryDroppableTest">
             </class>
-            <class name="tests.jquery.JqueryDroppableTextChangeTest">
+            <class name="jquery.JqueryDroppableTextChangeTest">
             </class>
-            <class name="tests.NavigationTest">
+            <class name="NavigationTest">
             </class>
         </classes>
     </test>

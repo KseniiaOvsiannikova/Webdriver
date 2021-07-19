@@ -1,5 +1,4 @@
-package tests;
-
+import baseTest.BaseTest;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;

@@ -8,7 +8,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class DriverManager {
 
-    private static WebDriver driver;
+    protected static WebDriver driver;
 
     private DriverManager() {
     }
