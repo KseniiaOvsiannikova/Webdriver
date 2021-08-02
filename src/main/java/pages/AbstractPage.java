@@ -1,7 +1,5 @@
 package pages;
 
-import driver.DriverManager;
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,8 +7,6 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.util.List;
 
 public abstract class AbstractPage {
     protected static final long WAIT_TIMEOUT_SECONDS = 50;
@@ -39,10 +35,6 @@ public abstract class AbstractPage {
                 .visibilityOf(element));
 
         return element.isEnabled();
-    }
-
-    protected List<WebElement> findElements(By by) {
-        return DriverManager.getDriver().findElements(by);
     }
 
 }

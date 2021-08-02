@@ -19,7 +19,7 @@ public class CucumberToolsPage extends AbstractPage {
     }
 
     @Override
-    protected AbstractPage openPage() {
-        return null;
+    protected CucumberToolsPage openPage() {
+        return new CucumberToolsPage(driver);
     }
 }
