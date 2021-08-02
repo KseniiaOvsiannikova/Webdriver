@@ -41,16 +41,9 @@ public abstract class AbstractPage {
         return element.isEnabled();
     }
 
-    protected WebElement findElement(By by) {
-        return DriverManager.getDriver().findElement(by);
-    }
-
     protected List<WebElement> findElements(By by) {
         return DriverManager.getDriver().findElements(by);
     }
 
-    protected boolean isElementDisplayed (By by) {
-        return !findElements(by).isEmpty();
-    }
 }
 
