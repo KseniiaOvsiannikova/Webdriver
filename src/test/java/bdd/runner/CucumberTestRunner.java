@@ -7,8 +7,7 @@ import io.cucumber.testng.CucumberOptions;
         plugin = "pretty",
         strict = true,
         monochrome = true,
-        tags = "@smoke",
-        glue = "bdd",
+        glue = "bdd/steps",
         features = "classpath:features")
 
 public class CucumberTestRunner extends AbstractTestNGCucumberTests {
