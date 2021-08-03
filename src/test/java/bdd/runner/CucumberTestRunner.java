@@ -4,7 +4,10 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
-        plugin = "pretty",
+        plugin = {"pretty", "html:target/cucumber-reports",
+                "json:target/cucumber-reports/CucumberTests.json",
+                "testng:target/cucumber-reports/CucumberTests.xml"},
+                //"io.qameta.allure.cucumberjvm.AllureCucumberJvm"},
         strict = true,
         monochrome = true,
         glue = "bdd/steps",

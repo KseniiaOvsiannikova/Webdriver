@@ -8,7 +8,6 @@ import org.testng.Assert;
 import pages.cucumber.CucumberToolsPage;
 import pages.cucumber.CucumberHomePage;
 
-
 public class StepDefinitions {
 
     @After
