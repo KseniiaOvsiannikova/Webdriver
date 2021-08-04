@@ -6,9 +6,7 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
         plugin = {"pretty", "html:target/cucumber-reports",
                 "json:target/cucumber-reports/CucumberTests.json",
-                "testng:target/cucumber-reports/CucumberTests.xml",
-                "json:target/Cucumber.json",
-                "html:target/cucumber-html-report"},
+                "testng:target/cucumber-reports/CucumberTests.xml"},
         strict = true,
         monochrome = true,
         glue = "bdd/steps",
