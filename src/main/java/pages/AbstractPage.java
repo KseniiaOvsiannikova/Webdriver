@@ -36,6 +36,5 @@ public abstract class AbstractPage {
 
         return element.isEnabled();
     }
-
 }
 

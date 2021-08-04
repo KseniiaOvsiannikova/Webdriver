@@ -25,5 +25,4 @@ public class CucumberHomePage extends AbstractPage {
 
         return this;
     }
-
 }
