@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Jsonplaceholder WEB Service Smoke Test Suite" verbose="8" parallel="methods" thread-count="2">
+    <test name="Response Status Code Test">
+        <classes>
+            <class name="webservices.jsonPlaceholder.StatusCodeTest"/>
+        </classes>
+    </test>
+    <test name="Response Header Test">
+        <classes>
+            <class name="webservices.jsonPlaceholder.ResponseHeaderTest"/>
+        </classes>
+    </test>
+    <test name="Response Body Test">
+        <classes>
+            <class name="webservices.jsonPlaceholder.ResponseBodyTest"/>
+        </classes>
+    </test>
+</suite>
