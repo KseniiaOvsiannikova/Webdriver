@@ -6,7 +6,7 @@ import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class StatusCodeTest extends BaseTestForWebServices {
+public class  StatusCodeTest extends BaseTestForWebServices {
 
     @Test
     public void checkStatusCode() {
